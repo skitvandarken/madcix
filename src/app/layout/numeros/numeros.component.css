@@ -1,0 +1,19 @@
+.madcix-bg{
+    background: linear-gradient(190deg, #FFA07A, #FF6347); /* Background color for the navbar */
+    border-radius: 5px;
+
+}
+
+.uk-button-secondary{
+    background-color: #141414 ;
+    color: #fff;
+}
+
+.uk-button-secondary:hover{
+    background-color: #333333 ;
+    color: #fff;
+    transition: 300ms;
+}
+
+
+
