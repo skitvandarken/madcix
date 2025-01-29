@@ -1,19 +1,33 @@
 .madcix-bg{
-    background: linear-gradient(190deg, #FFA07A, #FF6347); /* Background color for the navbar */
+    background: linear-gradient(-45deg, #FFA07A, #6d75d5, #4772ff); /* Background color for the navbar */
     border-radius: 5px;
 
 }
 
 .uk-button-secondary{
-    background-color: #141414 ;
+    background: linear-gradient(-190deg, #131313, #000000, #141414);
     color: #fff;
 }
 
 .uk-button-secondary:hover{
-    background-color: #333333 ;
+    background: linear-gradient(-190deg, #131313, #292929, #191919);
+    
     color: #fff;
-    transition: 300ms;
+    transition: 800ms;
 }
 
 
+    /* Make buttons responsive by setting width to 100% */
+    .responsive-button {
+        width: 100%;
+        max-width: 300px; /* Optional: Set a maximum width if you want to limit the button's size */
+        margin: 0 auto; /* Optional: Center button horizontally */
+    }
+
+    /* You can adjust button width for smaller screens using media queries */
+    @media (max-width: 768px) {
+        .responsive-button {
+            width: 90%; /* Adjust button width on smaller screens */
+        }
+    }
 

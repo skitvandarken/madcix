@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
-  imports: [],
+  imports: [
+  ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
