@@ -23,14 +23,14 @@
                      
                         <div class="uk-margin-medium-top">
 
-                            <a  class="uk-margin-small-right"><button 
-                                class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Preços</button></a>
+                            <a class="uk-margin-small-right bt-mdcix uk-button uk-button-secondary uk-button-large uk-border-pill" href="#pricing" uk-toggle>Preços</a>
 
-                        <a  class="uk-margin-small-right"><button
-                                
-                                class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Aderir</button></a>
-                        <a class="uk-margin-small-right"><button 
-                                class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Requisitos</button></a>
+
+                                <a class="uk-margin-small-right bt-mdcix uk-button uk-button-secondary uk-button-large uk-border-pill" href="#spec" uk-toggle>Aderir</a>
+
+                      
+                        
+                        <a class="uk-margin-small-right bt-mdcix uk-button uk-button-secondary uk-button-large uk-border-pill" href="#spec" uk-toggle>Requisitos</a>
 
 
                         </div>
@@ -140,12 +140,12 @@ dos seus produtos IP
                      
                         <div class="uk-margin-medium-top">
     
-                            <a class="uk-margin-small-right"><button 
+                            <a class="uk-margin-small-right "><button 
                                 class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Preços</button></a>
     
-                            <a class="uk-margin-small-right"><button
+                            <a class="uk-margin-small-right uk-margin-medium-top"><button
                                 class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Aderir</button></a>
-                            <a class="uk-margin-small-right"><button 
+                            <a class="uk-margin-small-right uk-margin-medium-top"><button 
                                 class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Requisitos</button></a>
     
                         </div>
@@ -216,8 +216,8 @@ dos seus produtos IP
                         <div class="uk-margin-medium-top">
                             <a class="uk-margin-small-right"><button 
                                 class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Preços</button></a>
-                            <a class="bt-mdcix uk-margin-small-right"><button 
-                                class="bt-mdcix  uk-button uk-button-large uk-button-secondary uk-border-pill">Aderir</button></a>
+                                <a class="uk-margin-small-right"><button
+                                    class="bt-mdcix uk-button uk-button-large uk-button-secondary uk-border-pill">Aderir</button></a>
                             <a class="uk-margin-small-right"><button 
                                 class="bt-mdcix  uk-button uk-button-large uk-button-secondary uk-border-pill">Requisitos</button></a>
                         </div>
@@ -275,6 +275,31 @@ dos seus produtos IP
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL -->
+
+
+
+    <div id="pricing" class="uk-flex-top uk-modal-container" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+    
+            <app-pricing></app-pricing>
+    
+        </div>
+    </div>
+
+    <div id="spec" class="uk-flex-top uk-modal-container" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+
+            <app-specs></app-specs>
+    
         </div>
     </div>
 

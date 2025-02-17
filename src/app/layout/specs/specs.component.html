@@ -1,0 +1,48 @@
+
+<div class="uk-container uk-margin-medium-top">
+    <h1>Requisitos Técnicos: Peering Pùblico</h1>
+  
+</div>
+
+<div class="uk-container uk-margin-large-top">
+    <h3>A utilização da rede MAD-CIX pelos membros deve estar sempre em conformidade com as normas pertinentes 
+        conforme estabelecidas na STD0001 e documentos associa dos Internet STD.</h3>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+    <table class="uk-table uk-table-small uk-table-divider">
+        <thead>
+            <tr>
+                <th>Física</th>
+                <th>MAC Layer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Interfaces Ethernet ligados a portas MAD-CIX devem estar explicitamente configuradas com duplex, velocidade e 
+                    outras definições de configuração e não devem ser auto-sensing</td>
+                <td>Os frames encaminhados para as portas MAD-CIX devem ter uma das seguintes Ethertypes</td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td>0x0800 - IPv4
+                    0x0806 – ARP
+                    0x86DD - IPv6
+                    <br>
+                
+                   <br> Todos os frames encaminhados de um serviço para uma porta MAD-CIX individual deverão ter o mesmo 
+                    endereço MAC de origem.
+                    <br>
+                    <br>
+                    Os frames encaminhados de um serviço para uma porta MAD-CIX individual deverão ter o mesmo endereço MAC de origem. Os frames encaminhados para as portas MAD-CIX não devem ser endereçados para um endereço de multicast.
+                </td>
+                
+                       
+                
+            </tr>
+          
+        </tbody>
+    </table>
+</div>
+
