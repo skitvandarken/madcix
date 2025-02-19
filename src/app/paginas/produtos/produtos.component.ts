@@ -3,6 +3,7 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SpecsComponent } from '../../layout/specs/specs.component';
 import { PricingComponent } from '../../layout/pricing/pricing.component';
+import { AderirComponent } from '../../layout/aderir/aderir.component';
 
 @Component({
   selector: 'app-produtos',
@@ -10,7 +11,8 @@ import { PricingComponent } from '../../layout/pricing/pricing.component';
     MenuComponent,
     RodapeComponent,
     SpecsComponent,
-    PricingComponent
+    PricingComponent,
+    AderirComponent
     
 ],
   templateUrl: './produtos.component.html',

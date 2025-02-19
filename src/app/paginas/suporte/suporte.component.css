@@ -1,0 +1,23 @@
+.uk-card:hover{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.uk-button-secondary {
+    background: linear-gradient(-190deg, #131313, #292929, #191919);
+
+}
+.uk-button-secondary:hover {
+
+    background: linear-gradient(-190deg, #131313, #292929, #191919);
+    
+    color: #fff;
+    transition: 800ms;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}

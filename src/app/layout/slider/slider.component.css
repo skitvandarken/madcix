@@ -1,0 +1,18 @@
+.uk-button-secondary{
+
+
+    background: linear-gradient(-190deg, #ffffff, #ffffff, #191919);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #000
+    
+    }
+
+.uk-button-secondary:hover{
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    
+    }

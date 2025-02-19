@@ -1,9 +1,12 @@
 import { Component, AfterViewInit} from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
+import { RodapeComponent } from '../rodape/rodape.component';
 
 @Component({
   selector: 'app-membros',
   imports: [
-
+    MenuComponent,
+    RodapeComponent
   ],
   templateUrl: './membros.component.html',
   styleUrl: './membros.component.css'

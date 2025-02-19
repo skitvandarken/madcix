@@ -39,3 +39,22 @@
     background: linear-gradient(45deg, #0378ff, #933800);
     color: white;
 }
+
+.uk-card-secondary{
+   
+    /* Semi-transparent white background */
+    background: rgba(59, 59, 59, 0.3);
+    
+    /* Blur effect for the glass-like appearance */
+    backdrop-filter: blur(10px);
+    
+    /* Optional: Add some border-radius for a softer look */
+    border-radius: 10px;
+    
+    /* Optional: Add a subtle border for depth */
+    border: 1px solid rgba(255, 255, 255, 0.653);
+    
+    /* Optional: Shadow for more depth */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+}
