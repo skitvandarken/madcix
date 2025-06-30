@@ -1,30 +1,19 @@
-<nav
-  class="uk-navbar-container uk-navbar uk-flex uk-flex-center uk-flex-middle"
-  uk-navbar
->
+<nav class="uk-navbar-container uk-navbar uk-flex uk-flex-center uk-flex-middle" uk-navbar>
   <div class="uk-container">
     <div class="uk-navbar-left uk-hidden@m">
-      <a
-        class="uk-navbar-toggle"
-        uk-navbar-toggle-icon
-        href="#"
-        uk-toggle="target: #offcanvas-nav"
-      ></a>
+      <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
     </div>
 
     <div class="uk-navbar-center uk-visible@m">
       <ul class="uk-navbar-nav ">
         <li class="uk-margin-large-left">
           <div class="">
-            <a routerLink="/" class="texto"
-              ><img
-                style="height: 50px; width: auto"
-                src="/img/MadCIX_Final_white.png"
-            /></a>
+            <a routerLink="/" class="texto"><img style="height: 50px; width: auto"
+                src="/img/MadCIX_Final_white.png" /></a>
           </div>
         </li>
         <li>
-          <a class="" routerLink="/sobre">Sobre</a>
+          <a style="color: #fff;" class="" routerLink="/sobre">Sobre</a>
         </li>
 
         <li>
@@ -44,8 +33,7 @@
             <a routerLink="/login">
               <button class="uk-button uk-button-secondary uk-border-rounded">
                 Entrar
-              </button></a
-            >
+              </button></a>
           </div>
         </li>
         <!--
@@ -69,17 +57,25 @@
 
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
   <div class="uk-offcanvas-bar">
-    <ul class="uk-nav uk-nav-default">
+    <ul class="uk-nav uk-nav-default ">
       <li>
-        <a class=""
-          ><img style="height: auto; width: 100px" src="/img/logo.png"
-        /></a>
+        <a class=""><img style="height: auto; width: 100px" src="img/MadCIX_Final_black.png" /></a>
       </li>
-      <li>
-        <a class="" routerLink="/ubuntu">Sobre o Programa</a>
+      <li style="margin-top: 10%;">
+        <a style="color: #000" class="" routerLink="/ubuntu">Sobre o Programa</a>
       </li>
+
+
       <li>
-        <a class="" routerLink="/ubuntu">Tornar-se Parceiro</a>
+        <a style="color: #000" class="" routerLink="/produtos">Produtos</a>
+      </li>
+
+      <li>
+        <a style="color: #000" class="" routerLink="/membros">Membros</a>
+      </li>
+
+      <li>
+          <a class="" routerLink="/suporte">Suporte Técnico</a>
       </li>
     </ul>
   </div>

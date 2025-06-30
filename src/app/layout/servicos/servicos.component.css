@@ -3,3 +3,12 @@
     background: linear-gradient(45deg, #0378ff, #933800);
     color: white;
 }
+
+
+@media  (max-width: 600px) {
+   
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+}
