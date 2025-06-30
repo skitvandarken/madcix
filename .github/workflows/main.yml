@@ -1,0 +1,60 @@
+name: Deploy Angular App to Web Disk
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular App
+        run: npm run build -- --configuration production
+
+      - name: Deploy via WebDAV
+        env:
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
+        run: |
+          BUILD_DIR="dist/devops/browser"
+          WEBDISK_URL="https://devcamp.online:2078"
+
+          find "$BUILD_DIR" -type f | while read -r file; do
+            RELATIVE_PATH="${file#"$BUILD_DIR/"}"
+            REMOTE_PATH="${WEBDISK_URL}/${RELATIVE_PATH}"
+
+            echo "Uploading $file to $REMOTE_PATH"
+
+            # Create remote directories if needed
+            DIR_PATH=$(dirname "$RELATIVE_PATH")
+            if [ "$DIR_PATH" != "." ]; then
+              IFS='/' read -ra DIR_PARTS <<< "$DIR_PATH"
+              PARTIAL_PATH=""
+              for PART in "${DIR_PARTS[@]}"; do
+                PARTIAL_PATH="$PARTIAL_PATH/$PART"
+                curl -k -s -S -u "$WEBDISK_USERNAME:$WEBDISK_PASSWORD" -X MKCOL "${WEBDISK_URL}${PARTIAL_PATH}" || true
+              done
+            fi
+
+            curl -k -s -S -u "$WEBDISK_USERNAME:$WEBDISK_PASSWORD" -T "$file" "$REMOTE_PATH"
+
+            if [ $? -ne 0 ]; then
+              echo "❌ Failed to upload: $file"
+              exit 1
+            else
+              echo "✅ Uploaded: $file"
+            fi
+          done
